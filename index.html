@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visual Creatives</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .intro {
+      background-color: #FFDB58; /* mustard color */
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.7s ease-in-out;
+    }
+
+    .intro h1 {
+      font-size: 3em;
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    .enter-btn {
+      padding: 12px 25px;
+      background-color: #222;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .enter-btn:hover {
+      background-color: #444;
+    }
+
+    .main-content {
+      display: none;
+      padding: 30px;
+      background: linear-gradient(to right, #fff7e6, #ffe0b3);
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .service p {
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .intro h1 {
+        font-size: 2em;
+      }
+
+      .enter-btn {
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Intro Section -->
+  <div class="intro" id="intro">
+    <h1>Visual Creatives</h1>
+    <button class="enter-btn" onclick="enterSite()">Enter</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content" id="mainContent">
+    <h2 style="margin-bottom: 20px; color: #222;">Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Event Posters</h3>
+        <p>Eye-catching poster designs for events that draw attention and increase reach.</p>
+      </div>
+      <div class="service">
+        <h3>Event Reels</h3>
+        <p>Short and engaging reels tailored for maximum event promotion on social media.</p>
+      </div>
+      <div class="service">
+        <h3>Promotional Reels for Coaching Classes</h3>
+        <p>Highlight your coaching strengths with smart, engaging short reels.</p>
+      </div>
+      <div class="service">
+        <h3>Logo Creations</h3>
+        <p>Unique and memorable logos that represent your brand’s identity.</p>
+      </div>
+      <div class="service">
+        <h3>AI Voice Over Videos</h3>
+        <p>Professional sounding AI voice overs for your video content needs.</p>
+      </div>
+      <div class="service">
+        <h3>Poster Designing</h3>
+        <p>Custom posters designed to impress and communicate clearly.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function enterSite() {
+      document.getElementById("intro").style.display = "none";
+      document.getElementById("mainContent").style.display = "block";
+      document.body.style.overflow = "auto";
+    }
+  </script>
+
+</body>
+</html>
